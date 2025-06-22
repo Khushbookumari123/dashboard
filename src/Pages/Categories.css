@@ -1,0 +1,150 @@
+.category {
+    /* border:2px solid red; */
+    height: 700px;
+    width: 100%;
+
+}
+
+.category h2 {
+    font-weight: bolder;
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-category-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    height: 45px;
+    width: 20vh;
+    margin-top: 30px;
+    margin-right: 30px;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-category-btn:hover {
+    background-color: #645f5f;
+}
+
+.category input {
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 30%;
+    height: 30px;
+}
+
+.category-heading {
+    margin-top: 50px;
+    font-weight: bold;
+    color: gray;
+    border: 1px solid rgb(90, 81, 81);
+
+}
+
+.category-heading,
+.category-detail {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 1fr 100px 60px 60px 80px;
+    align-items: center;
+    border-radius: 5px;
+    width: 95%;
+    margin-left: 20px;
+
+    padding: 10px;
+    border: 1px solid rgb(90, 81, 81);
+}
+
+.category-detail img {
+    width: 35px;
+    height: 35px;
+
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.category-detail p {
+    color: white;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.paggination{
+    margin-top: 10px;
+    margin-left: 1230px;
+    width:220px;
+    height:40px;
+    border: 1px solid rgb(90, 81, 81);
+    padding-top: 5px;
+    color: white;
+    outline-color: white;
+    background-color: #13b932;
+}
+.sub-categories {
+    /* border: 2px solid red; */
+    margin-top: 60px;
+    height: 700px;
+    width: 100%;
+
+}
+
+.sub-categories h2 {
+    font-weight: bolder;
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.subcategory-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-subcategory {
+    background-color: white;
+    color: black;
+    border: none;
+    height: 45px;
+    width: 25vh;
+    margin-top: 30px;
+    margin-right: 30px;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-subcategory:hover {
+    background-color: #645f5f;
+}
+
+.subcategory-controls {
+    margin-top: 20px;
+    /* color: white; */
+}
+
+.category-select {
+    width:220px;
+    margin-left: 20px;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+}

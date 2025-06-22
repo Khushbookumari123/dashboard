@@ -1,0 +1,117 @@
+.Recent-container {
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    border: 1px solid rgb(90, 81, 81);
+    margin-top: 35px;
+    margin-left: 35px;
+    height: 450px;
+    width: 37.5%;
+    margin-left: 920px;
+    margin-top: -450px;
+}
+
+.Recent-container h1 {
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.Recent-container p {
+    color: white;
+    margin-left: 20px;
+
+}
+
+.profiledetail {
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+
+}
+
+.profiledetail p {
+    padding-left: 40px;
+}
+
+.profiledetail img {
+    display: flex;
+    margin-top: -40px;
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .Recent-container {
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+    padding-bottom: 20px;
+    position: relative;
+    top: 0;
+  }
+
+  .Recent-container h1 {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  .Recent-container p {
+    margin-left: 15px;
+    font-size: 0.95rem;
+  }
+
+  .profiledetail {
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .profiledetail p {
+    padding-left: 60px;
+  }
+
+  .profiledetail img {
+    margin-top: -38px;
+    padding-left: 15px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .Recent-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px;
+    height: auto;
+  }
+
+  .Recent-container h1 {
+    font-size: 1.1rem;
+    margin-left: 10px;
+  }
+
+  .Recent-container p {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+
+  .profiledetail p {
+    padding-left: 55px;
+    font-size: 0.9rem;
+  }
+
+  .profiledetail img {
+    margin-top: -36px;
+    padding-left: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
