@@ -13,6 +13,8 @@ import Stack from '@mui/material/Stack';
 export default function Category() {
     const navigate = useNavigate();
 
+   
+
     const [data, setData] = useState([{ image: "https://images.woodenstreet.de/image/cache/data/coffee-table/volga-nested-mango-wood-coffee-table-walnut-finish/white-finish/new-logo/2-810x702.jpg", name: "MDF products", description: "MDF is a fantastic material for creating a wide variety of gifts due to its smooth surface, affordability, ease of cutting and shaping, and suitability for various finishes.", subcategory: "3", actions: "EditNoteOutlinedIcon" },
     { image: "https://images.all-free-download.com/images/graphiclarge/color_stationery_03_hd_pictures_166662.jpg", name: "Statinary", description: "Stationery refers to materials used for writing or typing, including paper, envelopes, pens, pencils, and other office supplies. It traditionally encompasses items that are typically sold by a stationer.", subcategory: "0", actions: "EditNoteOutlinedIcon" },
     { image: "https://giftcarnation.com/cdn/shop/products/Christmas_Gift_Hamper.png?v=1731157197&width=416", name: "Gift Hampers", description: "A gift is something voluntarily transferred by one person to another without expectation of compensation. The act of giving is often associated with various occasions, emotions, and social dynamics. Giving a thoughtful gift can strengthen the bond and fostering feelings of closeness and connection. It reinforces the sense of relationship and care.", subcategory: "0", actions: "EditNoteOutlinedIcon" },
