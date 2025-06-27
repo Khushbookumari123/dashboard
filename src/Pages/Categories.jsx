@@ -1,4 +1,4 @@
-import "../Pages/Categories.css";
+import "../Css/Categories.css";
 import Header from "../Components/Header"
 import { useState } from "react";
 import React from 'react';
@@ -30,7 +30,7 @@ export default function Category() {
                     <h2>Categories</h2>
                     <button className="add-category-btn" onClick={() => navigate("/addcategory")}>+ Add Category</button>
                 </div>
-                <input type="text" placeholder="Search..." className="search-bar" />
+                <input type="text" placeholder="Search Categories..." className="search-bar" />
 
                 <div className="category-heading">
                     <p>Image</p>
@@ -76,13 +76,12 @@ export default function Category() {
                     }} 
                     />
                 </Stack>
-
             </div>
 
             <div className="sub-categories">
                 <div className="subcategory-header">
                     <h2>Subcategories</h2>
-                    <button className="add-subcategory">+ Add Subcategory</button>
+                    <button className="add-subcategory"  onClick={() => navigate("/addsubcategory")}>+ Add Subcategory</button>
                 </div>
 
                 <div className="subcategory-controls">

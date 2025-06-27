@@ -64,6 +64,8 @@
   flex-direction: column;
   gap: 12px;
   margin-top: 20px;
+    /* border: 1px solid rgb(90, 81, 81); */
+
 }
 
 .product-details-form label {
@@ -223,4 +225,169 @@
 
 .add-image-btn:hover {
   background-color:  #373535;
+}
+
+/* --------------------Varient css----------------------- */
+
+.varient-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+  border: 1px solid rgb(90, 81, 81);
+  height:auto;  
+}
+.varient-details-form h2{
+margin-left: 20px;
+margin-top: 20px;
+}
+.varient-details-form p{
+margin-left: 20px;
+}
+.varient-details-form .stock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.stock label{
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.stock input{
+  width:45.5%; 
+  margin-left: 20px;
+
+}
+.varient-details-form .description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  gap: 10px;
+}
+.description label{
+  font-weight: 500;
+  margin-top: 10px;
+    margin-left: 20px;
+
+}
+.description textarea{
+  width:98%; 
+  margin-left: 20px;
+  border: 1px solid rgb(90, 81, 81);
+   background-color: black;
+   height: 150px;
+
+}
+.varient-details-form label {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.varient-details-form input,
+.varient-details-form textarea
+ {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: white;
+  /* margin-left: 20px; */
+
+  
+}
+.title-discription{
+   display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+}
+.title-discription .varient-form-group1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+gap: 10px;
+}
+.varient-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.varient-row .varient-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 10px;
+
+}
+.varient-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.varient-cancel-btn,
+.varient-next-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.varient-cancel-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid rgb(90, 81, 81);
+  transition: background-color 0.3s ease;
+
+}
+
+.varient-cancel-btn:hover {
+  background-color: #373535;
+
+}
+
+.varient-next-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background-color 0.3s ease;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.varient-next-btn:hover {
+  background-color:  #373535;
+  color: white;
+}
+
+.image-upload1 {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 50px;
+  border: 2px dashed rgb(90, 81, 81);
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100px;
+  transition: background-color 0.3s ease;
+
 }

@@ -40,7 +40,7 @@ export default function Addcategory() {
       <Header />
 <div className="add-category-container">
         <div className="add-category-header">
-          <button className="category-btn" onClick={() => navigate("/categories")}>← Back</button>
+          <button className="category-btn" onClick={() => navigate("/category")}>← Back</button>
           <h2>Add New Category</h2>
         </div>
         
@@ -101,7 +101,7 @@ export default function Addcategory() {
                   className="next-btn"
                   onClick={() => setActiveTab("image")}
                 >
-                  Next: Images →
+                  Create category
                 </button>
               </div>
 

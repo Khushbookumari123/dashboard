@@ -41,14 +41,14 @@ export default function Dashboard() {
         <span onClick={() => navigate("/products")}>Products</span>
         <span onClick={() => navigate("/category")}>Categories</span>
         <span onClick={() => navigate("/banners")}>Banners</span>
-        <span>Orders</span>
-        <span>Users</span>
-        <span>Reviews</span>
-        <span>Coupons</span>
+        <span onClick={() => navigate("/order")}>Orders</span>
+        <span onClick={() => navigate("/user")}>Users</span>
+        <span onClick={() => navigate("/review")}>Reviews</span>
+        <span onClick={() => navigate("/coupon")}>Coupons</span>
 
       </div>
       <div className="nav-right">
-        <input type="text" placeholder="Search..." className="search-bar" />
+        <input type="text" placeholder="Search Products..." className="search-barr" />
         {/* <img src="https://www.flaticon.com/free-icon-font/search_3917132"/> */}
         <div className="profile-icon" onClick={handleProfileClick}>
            {isDropdownOpen && (

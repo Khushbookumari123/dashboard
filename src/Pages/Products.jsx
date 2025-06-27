@@ -1,4 +1,4 @@
-import "../Pages/Products.css";
+import "../Css/Products.css";
 import Header from "../Components/Header"
 import { useState } from "react";
 import React from 'react';
@@ -29,7 +29,7 @@ export default function Products() {
                 <h2>Products</h2>
                   <button className="add-product-btn" onClick={() => navigate("/addproduct")}>+ Add Product</button>
 </div>
-                <input type="text" placeholder="Search..." className="search-bar" />
+                <input type="text" placeholder="Search Products..." className="search-bar" />
 
 <div className="product-heading">
           <p>Image</p>
