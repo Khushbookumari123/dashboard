@@ -6,52 +6,145 @@ import React from 'react';
 
 
 
-export default function Banners() {
 
-    // const [data, setData] = useState([{ image: "", name: "MDF products", description: "MDF is a fantastic material for creating a wide variety of gifts due to its smooth surface, affordability, ease of cutting and shaping, and suitability for various finishes.", subcategory: "3", actions: "EditNoteOutlinedIcon" },
-    // { image: "", name: "Statinary", description: "Stationery refers to materials used for writing or typing, including paper, envelopes, pens, pencils, and other office supplies. It traditionally encompasses items that are typically sold by a stationer.", subcategory: "0", actions: "EditNoteOutlinedIcon" },
-    // { image: "", name: "Gift Hampers", description: "A gift is something voluntarily transferred by one person to another without expectation of compensation. The act of giving is often associated with various occasions, emotions, and social dynamics. Giving a thoughtful gift can strengthen the bond and fostering feelings of closeness and connection. It reinforces the sense of relationship and care.", subcategory: "0", actions: "EditNoteOutlinedIcon" },
-    // { image: "", name: "Corporate Gifts", description: "Corporate gifts are items given by a company to its employees, clients, partners, or potential customers. These gifts serve various business purposes beyond simple generosity, often aiming to: 1. Build and strengthen relationships 2. Boost employee morale and recognition 3. Promote brand awareness", subcategory: "0", actions: "EditNoteOutlinedIcon" },
-    // { image: "", name: "MDF products", description: "Corporate gifts are items given by a company to its employees, clients, partners, or potential customers. These gifts serve various business purposes beyond simple generosity, often aiming to: 1. Build and strengthen relationships 2. Boost employee morale and recognition 3. Promote brand awareness", subcategory: "0", actions: "EditNoteOutlinedIcon" },
+const banners = [
+    {
+        img: "https://www.pixelstalk.net/wp-content/uploads/2016/10/Cute-doll-HD-Images.jpg",
+        date: "30/10/2025",
+    },
+    {
+        img: "https://rukminim2.flixcart.com/image/750/900/k45x0nk0/ceiling-lamp/y/a/x/led-jhumar-rainbow-light-decorative-bulb-light-small-onrr-original-imafn42mtaufpvb7.jpeg?q=90&crop=false",
+        date: "15/10/2025",
+    },
 
+    {
+        img: "https://m.media-amazon.com/images/I/61IRn4i33YL._UF1000,1000_QL80_.jpg",
+        date: "25/10/2025",
+    },
 
-    // ])
+];
 
+export default function Banner() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDialog = () => setIsOpen(!isOpen);
     return (
         <>
             <Header />
-            <div className="banners">
-                <div className="banners-header">
-                    <h2>Banners</h2>
-                    <button className="banners-btn">+ Add Banners</button>
-                </div>
-                
-
-                <div className="banners-heading">
-                    <div>Image</div>
-                    <div >Created At</div>
-                    <div>Actions</div>
-                </div>
 
 
-                {/* {data.map((item) => (
-                    <div className="banners-detail">
-                        <img src={item.image} />
-                        <p>{item.created}</p>
-                        <p><EditNoteOutlinedIcon /></p>
+    <h3 style={{ fontSize: "30px", color: "white", marginLeft: "-1100px", marginTop: "20px" }}>Banners</h3>
+
+    <button onClick={toggleDialog}
+    style={{
+                    width: "143px",
+                    marginLeft: "1285px",
+                    height: "40px",
+                    marginTop: "-40px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "white",
+                    color: "black",
+                    border: "none",
+                    borderRadius: "8px",
+                    fontSize: "15px",
+                    fontWeight: "500",
+                    cursor: "pointer",
+                    padding: "0 8px 0 1px",
+     }}
+                className="inline-flex items-center gap-2">
 
 
+                <svg style={{ marginLeft: "12px", marginRight: "10px" }} 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="22" height="17" 
+                viewBox="0 0 24 24" fill="none" 
+                stroke="currentColor" strokeWidth="2" 
+                strokeLinecap="round" strokeLinejoin="round" 
+                className="lucide lucide-plus mr-2 h-4 w-4">
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path></svg>
+                Add Banner
+
+                 </button>
+
+            {/* Dialog Modal */}
+            {isOpen && (
+                <div
+                    id="add-banner-dialog"
+                    role="dialog"
+                    aria-modal="true"
+                    className="fixed inset-0 flex items-center justify-center bg-black/50"
+                >
+                    <div className="bg-white p-6 rounded-md max-w-md w-full">
+                        <h2 className="text-lg font-semibold mb-4">Add Banner</h2>
+                        {/* Here you can insert your form markup */}
+                        <button
+                            type="button"
+                            onClick={() => setIsOpen(false)}
+                            className="px-4 py-2 bg-gray-300 rounded"
+                        >
+                            Close
+                        </button>
                     </div>
-                )) */}
-                {/* } */}
+                </div>
+            )}
+
+            <div className="banner-table-container">
+                <table className="banner-table">
+                    
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Created At</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {banners.map((banner, idx) => (
+                            <tr key={idx}>
+                                <td>
+                                    <div className="image-form-card">
+
+                                        <img
+                                            alt="Banner"
+                                            loading="lazy"
+                                            decoding="async"
+                                            src={banner.img}
+                                        />
+                                    </div>
+
+
+
+                                </td>
+                                <td style={{ color: "white" }}>{banner.date}</td>
+                                <td>
+                                    <button className="delete-btn" title="Delete">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        >
+                                            <path d="M3 6h18"></path>
+                                            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                            <line x1="10" x2="10" y1="11" y2="17"></line>
+                                            <line x1="14" x2="14" y1="11" y2="17"></line>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
-          
-
         </>
-
     );
-
 }
-
-
-
