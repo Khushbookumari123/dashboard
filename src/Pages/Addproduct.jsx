@@ -180,8 +180,94 @@ export default function Addproduct() {
           {activeTab === "variants" && (
 
             // ----------------------Varients code------------------------------            
-            <div>
-              <h3>Define product variants</h3>
+            <div className="varient-details-form">
+              <h2>Product Variant</h2>
+              <p style={{ color: "gray" }}>Add variant details for the product</p>
+
+              <div className="title-discription">
+              <div className="varient-form-group1">
+              <label>Title (Optional)</label>
+              <input type="text" placeholder="e.g.,Black,128GB" />
+             </div>
+
+             <div className="varient-form-group1">
+              <label>Description</label>
+              <input type="text" placeholder="e.g.,Black,128GB" />
+             </div>
+
+              </div>
+
+              <div className="varient-row">
+
+                <div className="varient-form-group">
+                  <label>Color</label>
+                  <input type="text" placeholder="e.g.,Black,red,blue" />
+
+                </div>
+                <div className="varient-form-group">
+                  <label>Price</label>
+                  <input type="text" placeholder="Enter Price" />
+                </div>
+              </div>
+               <div className="stock">
+              <label>Stock</label>
+              <input type="text" placeholder="Enter Stock Quantity" />
+               </div>
+               <div className="description">
+                 <label> Second Description</label>
+              <textarea>      </textarea>
+                </div>
+
+<p style={{marginTop:"10px"}}>Varient Images</p>
+              <input
+                ref={fileInputRef}
+                className="hidden"
+                accept="image/*"
+                type="file"
+                id="image"
+                name="image"
+                onChange={handleImageChange}
+                style={{ display: "none" }}
+              />
+              <div className="image-upload1" onClick={handleImageClick}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="upload-icon"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" x2="12" y1="3" y2="15"></line>
+                </svg>
+                <p>Click to upload an image</p>
+                <p className="image-hint">SVG, PNG, JPG or GIF (max. 2MB)</p>
+                {preview && (
+                  <img
+                    src={preview}
+                    alt="Preview"
+                    className="image-preview"
+                  />
+                )}
+              </div>
+
+               <div className="varient-form-buttons">
+                <button className="varient-cancel-btn" onClick={() => navigate("/products")}>
+                  Back
+                </button>
+                <button
+                  className="varient-next-btn"
+                  onClick={() => setActiveTab("image")}
+                >
+                  Create Product →
+                </button>
+              </div>
 
             </div>
           )}

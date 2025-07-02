@@ -38,12 +38,14 @@
 
 }
 
-.search-bar {
+.search-barr {
   border: 2px solid rgb(57, 55, 55);
   padding: 5px 10px;
   border-radius: 4px;
+  /* margin-top: 20px; */
   /* border: none; */
   margin-right: 15px;
+  /* border: 2px solid red; */
 }
 
 
@@ -72,7 +74,7 @@
   box-shadow: 0 0 5px rgba(113, 111, 111, 0.2);
   width: 120px;
   text-align: left;
-
+z-index: 30;
 }
 
 .dropdown-menu p {
