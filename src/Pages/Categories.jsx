@@ -1,8 +1,9 @@
 import "../Pages/Categories.css";
 import Header from "../Components/Header"
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 import Pagination from '@mui/material/Pagination';
@@ -12,18 +13,19 @@ import Stack from '@mui/material/Stack';
 
 export default function Category() {
     const navigate = useNavigate();
+    const [categorydata ,setCategoryData] = useState([])
 
-   
+    const fetchCategory=async()=>{
+     const response =await axios.get("http://localhost:5000/api/category")  
+     setCategoryData(response.data.data)
+    }
 
-    const [data, setData] = useState([{ image: "https://images.woodenstreet.de/image/cache/data/coffee-table/volga-nested-mango-wood-coffee-table-walnut-finish/white-finish/new-logo/2-810x702.jpg", name: "MDF products", description: "MDF is a fantastic material for creating a wide variety of gifts due to its smooth surface, affordability, ease of cutting and shaping, and suitability for various finishes.", subcategory: "3", actions: "EditNoteOutlinedIcon" },
-    { image: "https://images.all-free-download.com/images/graphiclarge/color_stationery_03_hd_pictures_166662.jpg", name: "Statinary", description: "Stationery refers to materials used for writing or typing, including paper, envelopes, pens, pencils, and other office supplies. It traditionally encompasses items that are typically sold by a stationer.", subcategory: "0", actions: "EditNoteOutlinedIcon" },
-    { image: "https://giftcarnation.com/cdn/shop/products/Christmas_Gift_Hamper.png?v=1731157197&width=416", name: "Gift Hampers", description: "A gift is something voluntarily transferred by one person to another without expectation of compensation. The act of giving is often associated with various occasions, emotions, and social dynamics. Giving a thoughtful gift can strengthen the bond and fostering feelings of closeness and connection. It reinforces the sense of relationship and care.", subcategory: "0", actions: "EditNoteOutlinedIcon" },
-    { image: "https://images.pexels.com/photos/264787/pexels-photo-264787.jpeg?cs=srgb&dl=pexels-pixabay-264787.jpg&fm=jpg", name: "Corporate Gifts", description: "Corporate gifts are items given by a company to its employees, clients, partners, or potential customers. These gifts serve various business purposes beyond simple generosity, often aiming to: 1. Build and strengthen relationships 2. Boost employee morale and recognition 3. Promote brand awareness", subcategory: "0", actions: "EditNoteOutlinedIcon" },
-    { image: "https://images.pexels.com/photos/264787/pexels-photo-264787.jpeg?cs=srgb&dl=pexels-pixabay-264787.jpg&fm=jpg", name: "MDF products", description: "Corporate gifts are items given by a company to its employees, clients, partners, or potential customers. These gifts serve various business purposes beyond simple generosity, often aiming to: 1. Build and strengthen relationships 2. Boost employee morale and recognition 3. Promote brand awareness", subcategory: "0", actions: "EditNoteOutlinedIcon" },
+    useEffect(()=>{
+       fetchCategory()
+    },[])
 
 
-    ])
-
+    console.log("CATEOGYR DATA FROM BACKEND:",categorydata)
     return (
         <>
             <Header />
@@ -43,7 +45,7 @@ export default function Category() {
                 </div>
 
 
-                {data.map((item) => (
+                {categorydata.map((item) => (
                     <div className="category-detail">
                         <img src={item.image} />
                         <p>{item.name}</p>
