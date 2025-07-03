@@ -19,9 +19,15 @@ export default function Category() {
      const response =await axios.get("http://localhost:5000/api/category")   //http://localhost:5000   https://---------/api/category
      setCategoryData(response.data.data)
     }
+        console.log("im khushboo ")
+        console.log("im khushboo ")
+
     useEffect(()=>{
        fetchCategory()
     },[])
+
+    console.log("I AM AJAY")
+    console.log("I AM AJAY")
 
 
     console.log("CATEOGYR DATA FROM BACKEND:",categorydata)
