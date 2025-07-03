@@ -16,10 +16,9 @@ export default function Category() {
     const [categorydata ,setCategoryData] = useState([])
 
     const fetchCategory=async()=>{
-     const response =await axios.get("http://localhost:5000/api/category")  
+     const response =await axios.get("http://localhost:5000/api/category")   //http://localhost:5000   https://---------/api/category
      setCategoryData(response.data.data)
     }
-
     useEffect(()=>{
        fetchCategory()
     },[])
